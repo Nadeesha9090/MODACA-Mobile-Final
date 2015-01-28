@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MoDACA Test Consume</title>
+		
+	 <link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css">
+	 <link rel="stylesheet" href="css/table.css">
+   <script type="text/javascript" src="cordova.js"></script>
+	 
+	 <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+	 <script type="text/javascript" src="jquery/jquery.mobile-1.4.2.min.js"></script>
+
+	
+
+</head>
+<body>
+
+<div data-role="page" id="page" class="mainPage" >
+
+	   <div data-role="content">
+			<!--/header-->	
+			<div data-role="header" data-position="inline" data-theme="b">
+		
+				<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+				<h1>Household Profile</h1>
+				<a href="index.html" data-icon="home">Menu</a>
+				
+			</div>
+		<!--/header-->
+		
+	<!--	<p><a id="btnHouseholds" class="btn btn-success" >Get Households</a></p>-->
+	<!--		<p><a id="btnHouse" class="btn btn-info" >Get House 2</a></p>-->
+			<p><a id="btnSave" class="btn btn-primary"> Save Household</a></p>
+			<p id="setx" >kkk</p>
+			
+			
+			<div data-role="fieldcontain">
+					<label > Household ID</label> 
+					<input class="inputClass" id="homeIds" placeholder="H0001" value="" data-mini="true" type="text">
+			</div>
+		  <a href="#page1" data-role="button" id="btnHouse"  data-theme="b">Search</a>
+		  <br>
+		  
+		</div>
+
+	</div>
+	
+
+
+<script type="text/javascript" >
+ var household = null;
+
+window.onload = function() {
+	
+
+	
+	$('#btnHouse').click(function() {
+		$.ajax({
+			url : 'http://localhost/MoDACA/api/bmis/getByID/1', // getHousehold => getByID // RUN THis
+			async : false,
+			type : 'post',
+			success : function(result) {
+				
+				bmis = getObjByID(result);
+				console.log(bmis);
+				alert(bmis);
+				
+				alert(bmis[0].value);
+				alert(bmis[1].value);
+				alert(bmis[2].value);
+				alert(bmis[3].value);
+				//alert(bmis[4].value);
+				//alert(household['leader_name']);
+			},
+			error : function(xhr, status, err) {
+				console.log(xhr);
+				console.log(status);
+				console.log(err);
+			}
+		});
+	});
+
+	
+	
+	// this function takes the result of the API call and the ID you want to extract
+	function getObjByID(result, id) {
+		var temp = jQuery.parseJSON(result);
+		temp = temp['data']['data'];
+		var objAry = jQuery.parseJSON(temp);
+		if(typeof id === 'undefined' ) {
+			return objAry;
+		} else 
+			return objAry[id];
+	}
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Household Profile DB storage</title>
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,
+                                       initial-scale=1, maximum-scale=1,
+                                       minimum-scale=1,width=device-width" />
+    
+	
+	 <link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css">
+	 <link rel="stylesheet" href="css/table.css">
+   <script type="text/javascript" src="cordova.js"></script>
+	 
+	 <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+	 <script type="text/javascript" src="jquery/jquery.mobile-1.4.2.min.js"></script>
+	  
+	  
+	
+</head>
+
+<body>
+
+	<div data-role="page" id="page" class="mainPage" >
+
+	   <div data-role="content">
+			<!--/header-->	
+			<div data-role="header" data-position="inline" data-theme="b">
+		
+				<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+				<h1>Household Profile</h1>
+				<a href="index.html" data-icon="home">Menu</a>
+				
+			</div>
+		<!--/header-->
+			<div data-role="fieldcontain">
+					<label > Household ID</label> 
+					<input class="inputClass" id="homeIds" placeholder="H0001" value="" data-mini="true" type="text">
+			</div>
+		  <a href="#page1" data-role="button" id="btnHouseholds" data-theme="a">Search</a>
+		  
+		</div>
+
+	</div>
+    <div data-role="page" id="page1">
+		<!--/header-->	
+		<div data-role="header" data-position="inline" data-theme="b">
+		
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+			<h1>Household Profile</h1>
+			<a href="index.html" data-icon="home">Menu</a>
+			
+		</div>
+		<!--/header-->
+        
+		<div id="wrapper">
+			 <form id="userInput" action ="" method="GET"> 
+				<div data-role="content">
+					
+					
+					<div data-role="fieldcontain">
+						<label > Home ID </label> 
+						<input class="inputClass" id="homeId" placeholder="H0001" value="" data-mini="true" type="text">
+					</div>
+					
+					
+					<div  data-role="fieldcontain">
+						<label > Owner </label> 
+						<input class="inputClass" id="owner" placeholder="Aberathne" value="" type="text">
+					</div>
+					
+										
+				<!--	<div data-role="fieldcontain">
+							<label  class="select">GramaNiladhari Division</label>
+							<select class="inputClass" id="gramaND">
+								<option value="GramaNiladhari Division 1">GramaNiladhari Division 1</option>
+								<option value="GramaNiladhari Division 2">GramaNiladhari Division 2</option>
+								<option value="GramaNiladhari Division 3">GramaNiladhari Division 3</option>
+								<option value="GramaNiladhari Division 4">GramaNiladhari Division 4</option>
+							</select>
+					</div>-->
+					
+					
+					<div data-role="fieldcontain">
+						<label > Contact No </label> 
+						<input  class="inputClass" id="contactNo" placeholder="071-9545-073" value="" type="number">
+					</div>
+					
+					
+					<div data-role="fieldcontain">
+						<label >Address:</label>
+						<textarea cols="40" rows="8"  class="inputClass" id="address"></textarea>
+					</div>
+					
+					
+					<div class="ui-block-a"><button type="submit" data-theme="d">Location in a Map</button></div>
+					
+					
+					<div data-role="fieldcontain">
+							<label  >Race</label>
+							<select  class="inputClass" id="race">
+								<option value=" Sinhalese"> Sinhalese</option>
+								<option value=" Sri Lanka Tamils"> Sri Lanka Tamils</option>
+								<option value=" Moors"> Moors</option>
+								<option value=" Indian Tamils "> Indian Tamils </option>
+								<option value=" Malays "> Malays </option>
+								<option value=" Burghers ">  Burghers </option>
+								
+							</select>
+					</div>
+					
+					<div data-role="fieldcontain">
+						 <label for="name">Income Rs:</label>
+						 <input type="text" name="income" class="inputClass" id="income" value=""  />
+					</div>
+					
+					
+					<div data-role="fieldcontain">
+						 <label for="name">No of Members:</label>
+						 <input type="text" name="fmembers" class="inputClass" id="numberMembers" value=""  />
+					</div>
+					
+					<!--- modify-->
+					<div class="ui-block-a"><button type="submit" data-icon="plus" data-theme="d">Add Family Members</button></div>
+					
+					
+					
+					<div data-role="fieldcontain">
+						 <label for="name">No of Pregnent Mothers:</label>
+						 <input type="text" name="pmothers" class="inputClass" id="pregnentMothers" value=""  />
+					</div>
+					
+					
+					
+					<div class="ui-block-a"><button type="submit" data-icon="plus" data-theme="d">Add Pregnent Mother</button></div>
+					
+					
+					<div data-role="fieldcontain">
+						 <label for="name">No of Babies:</label>
+						 <input type="text" name="babies" class="inputClass" id="numberBaby" value=""  />
+					</div>
+					
+					
+					<div class="ui-body ui-body-a">
+					<label for="name">Consumptions:</label>
+								<div class="ui-block-b"><button type="submit" data-icon="plus" data-theme="a">Oil</button></div>
+								<div class="ui-block-b"><button type="submit" data-icon="plus" data-theme="a">Salt</button></div>
+								<div class="ui-block-b"><button type="submit"  data-icon="plus"data-theme="a">Flaour</button></div>
+					</div>
+					
+					
+					<div data-role="fieldcontain">
+							<label for="textarea">Notes:</label>
+							<textarea cols="40" rows="30" name="notes" class="inputClass" id="note"></textarea>
+					</div>
+					
+					<!--- /modify-->
+					
+					
+				 </div>
+			 </form>
+		 </div>
+
+       
+      
+	</div>
+<script type="text/javascript" >
+
+  var household = null;
+
+window.onload = function() {
+	
+
+	$('#btnHouseholds').click(function() {
+		$.ajax({
+			url : 'http://modaca.k2vsoftware.com/api/households/getAll', // getHouseholds => getAll
+			async : false,
+			type : 'post',
+			success : function(result) {
+				
+				var id = homeIds.value;
+		//		var lastFive = id.substr(id.length - 5); // => "Tabs1"
+				var lastChar = id.substr(id.length - 1); // => "1"
+			
+		//		household = getObjByID(result,2);
+				
+				household = getObjByID(result,lastChar);
+				console.log(household);
+				console.log(household['lastChar']);
+				alert(household['leader_name']);
+				
+				fhomeId = (household['field_community_id']),
+				fowner = (household['leader_name']),
+				//fgramaND = (household['address']),
+				fcontactNo = (household['contact_no']),
+				faddress =(household['address']),
+				frace = (household['race']),
+				fincome = (household['income']),
+				fnumberMembers = (household['no_of_members']),
+				fpregnentMothers = (household['no_of_pregnant_mothers']),
+				fnumberBaby = (household['no_of_babies']),
+				fnote = (household['note']);
+				
+				
+				userInput.homeId.value = fhomeId;
+				userInput.owner.value = fowner;
+				//userInput.gramaND.value = fgramaND;
+				userInput.contactNo.value = fcontactNo;
+				userInput.address.value = faddress;
+				userInput.race.value = frace;
+				userInput.income.value = fincome;
+				userInput.numberMembers.value = fnumberMembers;
+				userInput.pregnentMothers.value = fpregnentMothers;
+				userInput.numberBaby.value = fnumberBaby;
+				userInput.note.value = fnote;
+				
+				
+			},
+			error : function(xhr, status, err) {
+				console.log(xhr);
+				console.log(status);
+				console.log(err);
+			}
+		});
+	});
+
+	
+	
+	
+	// this function takes the result of the API call and the ID you want to extract
+	function getObjByID(result, id) {
+		var temp = jQuery.parseJSON(result);
+		temp = temp['data']['data'];
+		var objAry = jQuery.parseJSON(temp);
+		return objAry[id];
+	}
+};
+/*
+var household = null;
+
+window.onload = function() {
+	
+
+	$('#btnHouseholds').click(function() {
+		$.ajax({
+			url : 'http://localhost/MoDACA/api/households/getAll', // getHouseholds => getAll
+			async : false,
+			type : 'post',
+			success : function(result) {
+				
+				var id = homeIds.value;
+				var lastChar = id.substr(id.length - 1); // => "1"
+			
+		//		household = getObjByID(result,2);
+				
+				household = getObjByID(result,lastChar);
+				console.log(household['lastChar']);
+				alert(household['leader_name']);
+				
+				
+				fhomeId = (JSON.household['field_community_id']),
+				fowner = (household['leader_name']),
+				//fgramaND = (household['address']),
+				fcontactNo = (household['contact_no']),
+				faddress =(household['address']),
+				frace = (household['race']),
+				fincome = (household['income']),
+				fnumberMembers = (household['no_of_members']),
+				fpregnentMothers = (household['no_of_pregnant_mothers']),
+				fnumberBaby = (household['no_of_babies']),
+				fnote = (household['note']);
+				
+				
+			userInput.homeId.value = fhomeId;
+			userInput.owner.value = fowner;
+            userInput.gramaND.value = fgramaND;
+            userInput.contactNo.value = fcontactNo;
+            userInput.address.value = faddress;
+            userInput.race.value = frace;
+            userInput.income.value = fincome;
+            userInput.numberMembers.value = fnumberMembers;
+            userInput.pregnentMothers.value = fpregnentMothers;
+            userInput.numberBaby.value = fnumberBaby;
+            userInput.note.value = fnote;
+				
+			},
+			error : function(xhr, status, err) {
+				console.log(xhr);
+				console.log(status);
+				console.log(err);
+			}
+		});
+	});
+	
+	// this function takes the result of the API call and the ID you want to extract
+	function getObjByID(result, id) {
+		var temp = jQuery.parseJSON(result);
+		temp = temp['data']['data'];
+		var objAry = jQuery.parseJSON(temp);
+		return objAry[id];
+	}
+}
+
+
+*/
+
+
+/*
+var household = null;
+	window.onload = function() {
+	
+
+	$('#btnHouseholds').click(function() {
+		$.ajax({
+			url : 'http://localhost/MoDACA/api/households/getAll', // getHouseholds => getAll
+			async : false,
+			type : 'post',
+			success : function(result) {
+				console.log(jQuery.parseJSON(result));
+				household = jQuery.parseJSON(result);
+				console.log(JSON.stringify(household));
+				
+				alert(JSON.stringify(household));
+				alert(household.data.data);
+				
+				next = jQuery.parseJSON(household.data.data);
+				
+				
+				 
+				fhomeId = (JSON.household['field_community_id']),
+				fowner = (household['leader_name']),
+				//fgramaND = (household['address']),
+				fcontactNo = (household['contact_no']),
+				faddress =(household['address']),
+				frace = (household['race']),
+				fincome = (household['income']),
+				fnumberMembers = (household['no_of_members']),
+				fpregnentMothers = (household['no_of_pregnant_mothers']),
+				fnumberBaby = (household['no_of_babies']),
+				fnote = (household['note']);
+				
+				
+			userInput.homeId.value = fhomeId;
+			userInput.owner.value = fowner;
+            userInput.gramaND.value = fgramaND;
+            userInput.contactNo.value = fcontactNo;
+            userInput.address.value = faddress;
+            userInput.race.value = frace;
+            userInput.income.value = fincome;
+            userInput.numberMembers.value = fnumberMembers;
+            userInput.pregnentMothers.value = fpregnentMothers;
+            userInput.numberBaby.value = fnumberBaby;
+            userInput.note.value = fnote;
+				
+				
+				
+				
+			},
+			error : function(xhr, status, err) {
+				console.log(xhr);
+				console.log(status);
+				console.log(err);
+			}
+		});
+	});
+	}
+*/
+</script>
+
+</body>
+</html>
+<!-- ********************* HMTL5 Storage end *********************** -->

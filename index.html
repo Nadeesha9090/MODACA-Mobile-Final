@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Multi-Level Push Menu - Demo 1</title>
+		<meta name="description" content="Multi-Level Push Menu: Off-screen navigation with multiple levels" />
+		<meta name="keywords" content="multi-level, menu, navigation, off-canvas, off-screen, mobile, levels, nested, transform" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		
+		
+		<link rel="stylesheet" href="style.css">
+	
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		
+		<link rel="stylesheet" type="text/css" href="css/flaticon.css"> 
+		
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		
+		<link rel="stylesheet" href="css/Live_tile/demo-styles.css" />
+		<script src="js/Live_tile/modernizr-1.5.min.js"></script>
+		<script src="js/Live_tile/modernizr-1.5.min.js"></script>
+
+		
+		<style>
+			img, object{
+				max-height:100%;
+				max-width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<h2 class="icon icon-world">MODACA Menu</h2>
+						<ul>
+						<li class="icon icon-arrow-left">
+								<a class="icon icon-pencil2" href="#">&nbsp;Initial Data</a>
+								<div class="mp-level">
+									<h2 class="icon icon-pencil2">Initial Data</h2>
+									<ul>
+										<li><a href="SaveDeletePlace.html" class="icon icon-location">&nbsp; Location</a></li>
+										<li><a href="_population.html" class="icon icon-users">&nbsp; Population</a></li>
+										<li><a href="_ageDistribution.html" class="icon icon-bars">&nbsp; Age Distribution</a></li>
+										<li><a href="_educationLevel.html" class="icon icon-book">&nbsp; Education Level</a></li>
+										<li><a href="_occupation.html" class="icon icon-user3">&nbsp; Occupation</a></li>
+										<li><a href="_monthlyIncome.html" class="icon  icon-coin">&nbsp; Monthly Income</a></li>
+										
+										<li><a href="#" class="icon icon-cog">&nbsp; Settings</a></li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-user" href="#">&nbsp;Profiles</a>
+								<div class="mp-level">
+									<h2 class="icon icon-user">Profile</h2>
+									<ul >
+										<li class="icon icon-arrow-left">
+										<a href="Household.html" class="icon icon-home">&nbsp; Household</a>
+										<!--	<a class="icon icon-copy" href="#">Household-Profile</a>-->
+												<div class="mp-level">
+													<h2 class="icon icon-home">Household</h2>
+													<ul>
+														<li class="icon icon-arrow-left"><a href="Household.html" >&nbsp; Add </a></li>
+														<li class="icon icon-arrow-left"><a href="Household-Display.html" >&nbsp; View & Edit </a></li>
+													</ul>
+												</div>
+										</li>
+										<li class="icon icon-arrow-left"><a href="FamilyMember.html" class="icon icon-user22">&nbsp; family Member </a></li>
+										<li class="icon icon-arrow-left"><a href="Baby.html" class="icon icon-github">&nbsp; Baby </a></li>
+										<li class="icon icon-arrow-left"><a href="PregnantMother.html" class="icon icon-user2">&nbsp; Pregnant Mother </a></li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-copy" href="#">&nbsp;Health Issue</a>
+								<div class="mp-level">
+									<h2 class="icon icon-copy">Health Issue</h2>
+									<ul>
+										<li><a href="_addHealthIssue.html" >&nbsp; Add Issue </a></li>
+										<li><a href="_addDeterminantestoHealthIssue.html" >&nbsp; Add Determinants </a></li>
+										<li><a href="#" >&nbsp; Create Questioner </a></li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-sigma" href="#">&nbsp;Calculator</a>
+								<div class="mp-level">
+									<h2 class="icon icon-sigma">Health Calculator</h2>
+									<ul>
+										<li><a href="BMI.html" >&nbsp; BMI Calculator </a></li>
+										<li><a href="WHR.html" >&nbsp; WHR Calculator </a></li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-list" href="#">&nbsp;Visualizing</a>
+								<div class="mp-level">
+									<h2 class="icon icon-list">Health Calculator</h2>
+									<ul>
+										<li><a href="BMIChart_.html" >&nbsp; BMI variation</a></li>
+										<li><a href="WHRChart.html" >&nbsp; WHR variation</a></li>
+										<li><a href="5 sen.html" >&nbsp; 5 Sense Development</a></li>
+									</ul>
+								</div>
+							</li>
+							
+							
+													
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-location2" href="#">&nbsp;Geo Location</a>
+								<div class="mp-level">
+									<h2 class="icon icon-location2">Geo Location</h2>
+									<ul>
+										<li><a href="Navigation.html" >&nbsp; Navigation </a></li>
+										<li><a href="Navigation_compass.html" >&nbsp;Compass </a></li>
+										<li><a href="Navigation_display_position.html" >&nbsp; Display Position </a></li>
+										<li><a href="Navigation_geo_Location_sensor.html" >&nbsp; Geo Location Sensor </a></li>
+										<li><a href="Navigation_dynamic_mapping_position.html" >&nbsp; Dynamic Mapping </a></li>
+										<li><a href="Navigation_static_mapping_position.html" >&nbsp; Static Mapping</a></li>
+										<li><a href="Navigation_update_geolocation.html" >&nbsp; Update Geo Location </a></li>
+										
+									</ul>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</nav>
+				<!-- /mp-menu -->
+
+				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+					<div class="scroller-inner">
+						<!-- Top Navigation -->
+						<div class="codrops-top clearfix">
+							<div class="block block">
+								<p><a href="#" id="trigger" class="menu-trigger">&nbsp;</a></p>
+								
+							</div>
+						</div>
+						
+						<div class="demo-wrapper">
+							<!-- classnames for the pages should include: 1) type of page 2) page name-->
+							  <div class="s-page random-restored-page">
+								<h2 class="page-title">Some minimized App</h2>
+								<div class="close-button s-close-button">x</div>
+							  </div>
+							  <div class="s-page custom-page">
+								<h2 class="page-title">Thank You!</h2>
+								<div class="close-button s-close-button">x</div>
+							  </div>
+							  <div class="r-page random-r-page">
+
+								<div class="page-content">
+								  <h2 class="page-title">App Screen</h2>
+								  <p>Chew iPad power cord chew iPad power cord attack feet chase mice leave dead animals as gifts and stick butt in face chew iPad power cord. Chase mice. Run in circles use lap as chair why must they do that. Intrigued by the shower destroy couch leave hair everywhere sleep on keyboard chew iPad power cord. Use lap as chair. Missing until dinner time stand in front of the computer screen, intently sniff hand. Find something else more interesting. Destroy couch play time so inspect anything brought into the house hate dog burrow under covers. Sleep on keyboard destroy couch so hate dog so hide when guests come over. Chase mice destroy couch lick butt throwup on your pillow use lap as chair yet intrigued by the shower but climb leg. Stare at ceiling make muffins or hunt anything that moves claw drapes. Intently sniff hand intrigued by the shower. Why must they do that. Cat snacks leave dead animals as gifts or inspect anything brought into the house sweet beast so stare at ceiling give attitude. Flop over claw drapes but sun bathe lick butt, and chase mice. Rub face on everything lick butt leave hair everywhere lick butt, missing until dinner time for use lap as chair lick butt. Make muffins leave dead animals as gifts play time. Chew foot intrigued by the shower stare at ceiling inspect anything brought into the house yet hopped up on goofballs. 
+
+								  Hunt anything that moves intently sniff hand for hunt anything that moves play time. Chew foot climb leg throwup on your pillow so lick butt yet make muffins hate dog. Intrigued by the shower. Intently sniff hand shake treat bag. Cat snacks burrow under covers make muffins but all of a sudden go crazy find something else more interesting. Flop over chase mice. Give attitude. Inspect anything brought into the house. Stick butt in face sun bathe so find something else more interesting and intrigued by the shower. Rub face on everything use lap as chair. 
+
+								  Under the bed claw drapes chase mice but leave hair everywhere yet make muffins yet claw drapes. Use lap as chair. Find something else more interesting stretch for under the bed. Nap all day intrigued by the shower, hate dog sweet beast intently sniff hand so hate dog nap all day. Swat at dog hide when guests come over and mark territory chase mice for cat snacks. Use lap as chair. Lick butt throwup on your pillow need to chase tail. 
+
+								  Mark territory. Stick butt in face shake treat bag yet hunt anything that moves, yet hopped up on goofballs yet stare at ceiling under the bed. Give attitude chase imaginary bugs stretch so hunt anything that moves so hide when guests come over but intrigued by the shower find something else more interesting. Make muffins behind the couch for chew foot. Sweet beast flop over but throwup on your pillow. Intently sniff hand use lap as chair and missing until dinner time and chase imaginary bugs. 
+								  </p>
+								</div>
+								
+								<div class="close-button r-close-button">x</div>
+							  </div>
+							<!--each tile should specify what page type it opens (to determine which animation) and the corresponding page name it should open-->
+							  <div class="dashboard clearfix">
+								<ul class="tiles">
+								  <div class="col1 clearfix">
+									<li class="tile tile-big tile-1 slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+									  <div><p>This tile's content slides up</p></div>
+									  <div><p>View all tasks</p></div>
+									</li>
+									<li class="tile tile-small tile tile-2 slideTextRight" data-page-type="s-page" data-page-name ="random-restored-page">
+									  <div><p class="icon-arrow-right"></p></div>
+									  <div><p>Tile's content slides right. Page opens from left</p></div>
+									</li>
+									<li class="tile tile-small last tile-3" data-page-type="r-page" data-page-name="random-r-page">
+									  <p class="icon-calendar-alt-fill"></p>
+									</li>
+									<li class="tile tile-big tile-4 fig-tile" data-page-type="r-page" data-page-name="random-r-page">
+									  <figure>
+										<img src="images/Live_tile/blue.jpg" />
+										<figcaption class="tile-caption caption-left">Slide-out Caption from left</figcaption>
+									  </figure>
+									</li>
+								  </div>
+
+								  <div class="col2 clearfix">
+									<li class="tile tile-big tile-5" data-page-type="r-page" data-page-name="random-r-page">
+									  <div><p><span class="icon-cloudy"></span>Household Profile</p></div>
+									</li>
+									<li class="tile tile-big tile-6 slideTextLeft" data-page-type="r-page" data-page-name="random-r-page">
+									  <div><p><span class="icon icon-home"></span>Household </p></div>
+									  <div><p>View Profile</p></div>
+									</li>
+									<!--Tiles with a 3D effect should have the following structure:
+										1) a container inside the tile with class of .faces
+										2) 2 figure elements, one with class .front and the other with class .back-->
+										<a href="https://www.google.com/maps/d/viewer?authuser=0&hl=en&mid=zuEmV2nPLKKE.kPdk8PhOkeuo">
+											<li class="tile tile-small tile-7 rotate3d rotate3dX" >
+											  <div class="faces">
+												<div class="front"><span class="icon icon-location2"></span></div>
+												<div class="back"><p>Map</p></div>
+											  </div>
+											</li>
+										</a>
+										<a href="Navigation_compass.html">
+											<li class="tile tile-small last tile-8 rotate3d rotate3dY">
+											  <div class="faces">
+												<div class="front"><span class="icon icon-location2"></span></div>
+												<div class="back"><p>Compass</p></div>
+											  </div>
+											</li>
+										</a>
+								  </div>
+
+								  <div class="col3 clearfix"> 
+									<a href="http://www.rjt.ac.lk/">								  
+									<li class="tile tile-2xbig tile-9 fig-tile">
+									  <figure>
+										<img src="images/Live_tile/summer2.jpg" />
+										<figcaption class="tile-caption caption-bottom">Fixed Caption: Some Subtitle or Tile Description Goes Here with some kinda link or anything
+										</figure>
+									</li>
+									</a>
+									<li class="tile tile-big tile-10" data-page-type="s-page" data-page-name="custom-page">
+									  <div><p>Windows-8-like Animations with CSS3 &amp; jQuery &copy; Sara Soueidan. Licensed under MIT.</p></div>
+									</li>
+								  </div>
+								</ul>
+							  </div><!--end dashboard-->
+
+							</div><!--Endrr-->
+						
+						<!-- <center><img src="images/home.jpg"></a><br /></center>-->
+					</div><!-- /scroller-inner -->
+				</div><!-- /scroller -->
+
+			</div><!-- /pusher -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/mlpushmenu.js"></script>
+		<script>
+			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+		</script>
+		
+		<!--====================================end wrapper================================================-->
+	<script src="js/Live_tile/jquery-1.8.2.min.js"></script>
+	<script src="js/Live_tile/scripts.js"></script>
+
+	</body>
+</html>
